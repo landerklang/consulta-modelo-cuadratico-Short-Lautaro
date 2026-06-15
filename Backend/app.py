@@ -8,8 +8,8 @@ CORS(app)
 # IMPORTANTE: Usar 10.0.2.2 (host) porque NAT aísla las VMs
 # El puerto 5001 debe estar reenviado en VirtualBox a la VM Cache
 cache_client = redis.Redis(
-    host='10.0.2.2',      # IP del host (Windows) desde la VM
-    port=5001,             # Puerto reenviado al cache
+    host='127.0.0.1',      # IP del host (Windows) desde la VM
+    port=6379,             # Puerto reenviado al cache
     decode_responses=True,
     socket_connect_timeout=2
 )
